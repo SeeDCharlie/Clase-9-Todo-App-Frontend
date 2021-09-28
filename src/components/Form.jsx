@@ -7,10 +7,8 @@ const Form = () => {
 
   // Esta es mi lista de todos
   const [todos, setTodos] = useState([
-    {
-      todo: 'todo 1',
-      complete: true,
-    },
+    
+
   ]);
 
   // Esto maneja el cambio del input
@@ -43,6 +41,8 @@ const Form = () => {
       </form>
       {todos.map((value, index) => (
         <Todo
+          edit={true}
+          onchange={handleChange}
           todo={value.todo}
           key={index}
           index={index}
