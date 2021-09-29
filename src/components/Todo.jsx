@@ -2,26 +2,40 @@ import React, { useState } from 'react';
 
 const Todo = ({ todo, index, deleteTodo }) => {
 
-  const [ edit, setedit] = useState(false);
+  console.log("index "  + index );
+
+  const [ edit, setedit] = useState(true);
+
+  const [keyText, setKeyText] = useState(todo);
+
+  const [textEdit, setText] = useState('edit');
+
+  const [btnEditClass, setClass] = useState('btn-edit');
 
   function setEdit(){
-    console.log("hla mundo");
     if(edit){
       setedit(false);
+      setText("guardar");
+      setClass('btn-guardar');
     }else{
       setedit(true);
+      setText("edit");
+      setClass('btn-edit');
     }
     console.log(edit);
   }
+
+
   return (
+    
     <>
       <div className='list'>
         <div>
           <input type="checkbox" name="" id="" />
-          <input type="text" name='todo' value={todo} id={index} disabled={edit} />
+          <input type="text" value={keyText} onChange={e => setKeyText(e.target.value)}  disabled={edit} />
         </div>
         <div>
-          <button className="btn-edit" onClick={() => setEdit()} >edit</button>
+          <button className={btnEditClass} onClick={() => setEdit()} >{textEdit}</button>
           <button className='btn-delete' onClick={() => deleteTodo(index)} >
             x
           </button>
