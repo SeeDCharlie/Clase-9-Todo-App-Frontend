@@ -38,6 +38,7 @@ const Todo = ({ todo, index, deleteTodo }) => {
           </button>
         </div>
       </div>
+      <hr />
     </>
   );
 };

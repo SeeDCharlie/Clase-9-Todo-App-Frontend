@@ -20,22 +20,27 @@ const Form = () => {
 
   // Elimina el todo
   const deleteTodo = (index) => {
-    const newTodos = [...todos];   
-    newTodos.splice(index, 1);    
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
     setTodos(newTodos);
   };
 
   return (
     <>
       <form onSubmit={(e) => e.preventDefault()}>
+
         <label>Agregar todo</label>
-        <br />
-        <input type='text' name='todo' onChange={(e) => setTodo( e.target.value )} />
+        <input type='text' name='todo' onChange={(e) => setTodo(e.target.value)} />
         <button className='btn-guardar' onClick={handleClick}>Agregar</button>
+
       </form>
-      {todos.map((value, index) => (
-        <Todo todo={value} index={index} key={index} deleteTodo={deleteTodo} />
-      ))}
+      <br />
+      <div className='tabla'>
+        {todos.map((value, index) => (
+          <Todo todo={value} index={index} key={index} deleteTodo={deleteTodo} />
+        ))}
+      </div>
+
     </>
   );
 };

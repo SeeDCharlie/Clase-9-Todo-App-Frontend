@@ -15,7 +15,8 @@ const App = () => {
   return (
     <div className='App'>
       <div className='App-content'>
-        <p>Aqui haremos nuestro TODO</p>
+        <h2>Aqui haremos nuestro TODO</h2>
+        <hr/>
         <Form />
       </div>
     </div>

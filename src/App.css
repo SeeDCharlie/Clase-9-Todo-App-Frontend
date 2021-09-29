@@ -1,17 +1,40 @@
-.App {
-  text-align: center;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@700&display=swap');
 
 .App-content {
-  background-color: #4d4d4d;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 0 50px;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(0, 132, 255);
+  font-family: 'Gemunu Libre', sans-serif;
+
+}
+.App-content h2{
+  font-weight: 1500;
+  font-size: 4rem;
+  line-height: 20px;
+}
+.App-content hr{
+  width: 100%;
+}
+
+form{
+  padding: 10px;
+  background-image: radial-gradient(circle at 50% -20.71%, #ff7249 0, #ff5f50 16.67%, #ff4c55 33.33%, #ff3858 50%, #e92459 66.67%, #d40d5a 83.33%, #c1005c 100%);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  border: solid 1px #ccc;
+  box-shadow: 10px 7px 5px rgba(2, 2, 2, 0.5);
+  color: #fff;
+
+}
+
+form label{
+  font-weight: 800;
+  font-size: 2rem;
 }
 
 form input {
@@ -19,6 +42,7 @@ form input {
   border-radius: 5%;
   display: flex;
   vertical-align: auto;
+  margin: 0 15px;
 }
 
 .btn-guardar {
@@ -33,11 +57,10 @@ form input {
   height: 30px;
   width: auto;
   margin: 3px;
-  padding: 3px;
-}
-
-h3 {
-  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 5px;
+  border: solid 1px #ccc;
 }
 
 .list {
@@ -45,6 +68,20 @@ h3 {
   margin: 5px;
   flex-direction: row;
   align-items: flex-end;
+}
+
+.tabla {
+  background-image: radial-gradient(circle at 50% -20.71%, #df49c9 0, #eb40ba 7.14%, #f437aa 14.29%, #fa3099 21.43%, #ff2c89 28.57%, #ff2c78 35.71%, #ff3168 42.86%, #ff3858 50%, #fb4148 57.14%, #f64a39 64.29%, #ef5428 71.43%, #e75d14 78.57%, #dd6600 85.71%, #d26e00 92.86%, #c77500 100%);
+  padding: 5px;
+  min-height: 30px;
+  box-shadow: 10px 7px 5px rgba(2, 2, 2, 0.5);
+  max-height: 400px;
+  overflow: auto;
+}
+
+.list input[type=text]{
+  height:30px;
+  margin: 0 15px;
 }
 
 .btn-delete {
@@ -58,7 +95,10 @@ h3 {
   background-color: red;
   height: 30px;
   width: 30px;
+  font-weight: 800;
+  font-size: 1.2rem;
   margin: 3px;
+  border: solid 1px #ccc;
 }
 
 .btn-edit {
@@ -73,5 +113,8 @@ h3 {
   height: 30px;
   width: auto;
   margin: 3px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  border: solid 1px #ccc;
   padding: 3px;
 }
