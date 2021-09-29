@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 
 const Todo = ({ todo, index, deleteTodo }) => {
 
-  console.log("index "  + index );
-
   const [ edit, setedit] = useState(true);
 
   const [keyText, setKeyText] = useState(todo);
@@ -22,7 +20,6 @@ const Todo = ({ todo, index, deleteTodo }) => {
       setText("edit");
       setClass('btn-edit');
     }
-    console.log(edit);
   }
 
 
